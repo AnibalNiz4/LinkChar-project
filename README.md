@@ -60,6 +60,6 @@ Ya para terminar, creé las secciones y componentes de cada una de las película
 Para concluir la página, procedí por adaptar todo a dispositivos móviles para que se pueda ver comodamente sea en PC como en móviles.
 
 ---
-Espero les guste, pueden ver el resultado final en:
+Espero les guste, pueden ver el resultado final en: https://linkchar-project.vercel.app/
 
 😁👀
