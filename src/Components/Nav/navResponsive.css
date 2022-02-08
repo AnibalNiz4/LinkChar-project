@@ -1,0 +1,165 @@
+.navResponsive {
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    position: static;
+    border-bottom: 1px solid #323232;
+}
+
+.logoNavResponsive{
+    position: relative;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
+
+.logoNavResponsive:hover {
+    transform: scale(1.05);
+}
+
+.logoNavResponsive::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: -webkit-gradient(linear, left top, right top, from(#EC008C), to(#FC6767));
+    background: linear-gradient(to right, #EC008C, #FC6767);
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    z-index: 1;
+}
+
+.hamburgerNav {
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+    z-index: 111111111111111111111;
+}
+
+.hamburgerNav span {
+    height: 2px;
+    background: white;
+    width: 25px;
+    margin-top: 4px;
+}
+
+.activeHamburger span:first-child {
+    transform: rotate(45deg);
+    transform-origin: 25%;
+}
+
+.activeHamburger span:nth-child(2) {
+    display: none;
+}
+
+.activeHamburger span:last-child {
+    transform: rotate(-45deg);
+    transform-origin: 40%;
+}
+
+.navRes_Container {
+    position: fixed;
+    height: 0;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 1);
+    color: white;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 11;
+}
+
+.activeNav {
+    height: 100vh;
+    display: flex;
+}
+
+.ulNavResponsive {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+.ulNavResponsive li {
+    font-size: 18px;
+    padding: 15px 0;
+    border-top: 1px solid #323232;
+    cursor: pointer;
+}
+
+.ulNavResponsive li:last-child {
+    border-bottom: 1px solid #323232;
+}
+
+.ulNavResponsive li:hover {
+    background: rgba(255, 255, 255, .1);
+}
+
+.profileResponsive {
+    width: 100%;
+    text-align: center;
+}
+
+.profileResponsive input {
+    width: 90%;
+    height: 35px;
+    border: 1px solid rgba(255, 255, 255, .4);
+    padding: 0 10px;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    color: white;
+}
+
+.profileResponsive input::placeholder {
+    font-size: 14px;
+}
+
+.profileResponsive p {
+    font-size: 18px;
+    padding: 15px 0;
+    border-top: 1px solid #323232;
+    border-bottom: 1px solid #323232;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.profileResponsive p:hover {
+    background: rgba(255, 255, 255, .1);
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 1001px) {
+    .navResponsive {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 1001px) {
+    .hamburgerNav {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    .navRes_Container {
+        display: none;
+    }
+}

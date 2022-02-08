@@ -1,0 +1,141 @@
+.favouritesContainer {
+    color: white;
+    background: #1E1E21;
+    height: 100%;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-left: 30px;
+    transition: all .3s ease-out;
+}
+
+.favouritesContainer h2 {
+    font-size: 20px;
+}
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0 20px 0;
+}
+
+.genres p {
+    margin-right: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    opacity: .9;
+}
+
+.genres p:hover {
+    opacity: 1;
+}
+
+.genres p:first-child {
+    background: #8769FF;
+    padding: 7px 20px;
+    border-radius: 15px;
+}
+
+.genres p:nth-child(2) {
+    background: #F36F45;
+    padding: 7px 20px;
+    border-radius: 15px;
+}
+
+.genres p:nth-child(3) {
+    background: #8769FF;
+    padding: 7px 20px;
+    border-radius: 15px;
+}
+
+.genres p:nth-child(4) {
+    background: #F36F45;
+    padding: 7px 20px;
+    border-radius: 15px;
+}
+
+.genres p:last-child {
+    background: #61D1EA;
+    padding: 7px 20px;
+    border-radius: 15px;
+}
+
+.addGenres {
+    display: flex;
+}
+
+.addGenres p {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.addFavouritesGenres {
+    display: flex;
+}
+
+.addFavouritesGenres p {
+    margin-right: 10px;
+    background: #262629;
+    padding: 7px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    opacity: .8;
+}
+
+.addFavouritesGenres p:hover {
+    opacity: 1;
+}
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .favouritesContainer {
+        padding: 40px 20px;
+    }
+    
+    .favouritesContainer h2 {
+        font-size: 18px;
+    }
+    
+    .genres {
+        margin: 5px 0 20px 0;
+    }
+    
+    .genres p {
+        font-size: 14px;
+    }
+    
+    .genres p:first-child {
+        padding: 6px 18px;
+    }
+    
+    .genres p:nth-child(2) {
+        padding: 6px 18px;
+    }
+    
+    .genres p:nth-child(3) {
+        padding: 6px 18px;
+    }
+    
+    .genres p:nth-child(4) {
+        padding: 6px 18px;
+    }
+    
+    .genres p:last-child {
+        padding: 6px 18px;
+    }
+    
+    .addGenres p {
+        font-size: 15px;
+    }
+    
+    .addFavouritesGenres {
+        flex-wrap: wrap;
+    }
+    
+    .addFavouritesGenres p {
+        font-size: 14px;
+        padding: 6px 18px;
+    }
+}

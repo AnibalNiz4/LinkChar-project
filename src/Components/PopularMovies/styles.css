@@ -1,0 +1,85 @@
+.popularContainer {
+    width: 85%;
+    color: white;
+    margin-top: 40px;
+}
+
+.popularMoviesDiv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.moviePopularCard {
+    height: 170px;
+    width: 250px;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    opacity: .9;
+    position: relative;
+    box-shadow: 0 0 2px rgba(255, 255, 255, .3);
+}
+
+.moviePopularCard:hover > .hoverCard {
+    opacity: .9;
+    visibility: visible;
+}
+
+.moviePopularCard:hover {
+    opacity: 1;
+}
+
+.popularImg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.starPopularDiv {
+    display: flex;
+    align-items: center;
+}
+
+.starPopularDiv p {
+    font-size: 13px;
+}
+
+.starPopularDiv img {
+    margin-right: 5px;
+}
+
+.genresMovie {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 7px;
+}
+
+.h5Popular {
+    font-size: 13px;
+}
+
+@media screen and (max-width: 1001px) {
+    .popularContainer {
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .popularMoviesDiv {
+        justify-content: center;
+    }
+    
+    .moviePopularCard {
+        height: 160px;
+        width: 240px;
+    }
+
+    .starPopularDiv p {
+        font-size: 12px;
+    }
+    
+    .starPopularDiv img {
+        margin-right: 5px;
+    }
+}

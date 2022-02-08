@@ -1,0 +1,13 @@
+.sectionContainer{
+    width: 930px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 1001px) {
+    .sectionContainer {
+        width: 100%;
+    }
+}

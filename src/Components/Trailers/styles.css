@@ -1,0 +1,154 @@
+.trailersContainer{
+    width: 400px;
+    height: 855px;
+    border-right: 1px solid #323232;
+    position: relative;
+    transition: all .2s ease-out;
+}
+
+.active {
+    width: 1px;
+    transition: all .2s ease-out;
+}
+
+.displayNone {
+    display: none;
+    transition: all .2s ease-out;
+}
+
+.triangleTrailers {
+    position: absolute;
+    right: -15px;
+    top: 100px;
+    cursor: pointer;
+}
+
+.trailers {
+    display: inline;
+    overflow: hidden;
+    width: 399px;
+    transition: all .2s ease-out;
+}
+
+.trailersText {
+    color: white;
+    width: 399px;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.trailersText h2 {
+    font-size: 20px;
+}
+
+.trailersText p {
+    font-size: 13px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.Sort_Today {
+    display: flex;
+    margin-right: 40px;
+}
+
+.sortP {
+    padding-right: 10px;
+    color: #606265;
+}
+
+.sortP:hover {
+    color: white;
+}
+
+.todayDiv {
+    display: flex;
+}
+
+.todayDiv img{
+    height: 4px;
+    margin: 1px 0;
+}
+
+.arrowsToday{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.favouriteDiv {
+    height: 340px;
+}
+
+.moviesCardContainer {
+    padding-left: 30px;
+}
+
+
+
+
+@media screen and (max-width: 1001px) {
+    .trailersContainer{
+        order: 2;
+        width: 100%;
+        border-right: none;
+        height: 100%;
+    }
+    
+    .active {
+        width: 0;
+    }
+    
+    .triangleTrailers {
+        display: none;
+    }
+    
+    .trailers {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .trailersText {
+        justify-content: space-between;
+        padding: 0 20px;
+        width: 100%;
+    }
+    
+    .trailersText h2 {
+        font-size: 18px;
+    }
+    
+    .trailersText p {
+        font-size: 12px;
+        margin-right: 5px;
+    }
+    
+    .Sort_Today {
+        margin-right: 0;
+    }
+    
+    .favouriteDiv {
+        height: 400px;
+    }
+    
+    .moviesCardContainer {
+        padding-left: 0;
+    }
+
+    .moviesCardContainerWithin {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 40px;
+        justify-content: center;
+    }
+
+    .favouriteDiv {
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# LinkChar project!! 😃
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Este desafío consiste en consumir la api de [themoviedb.org](https://www.themoviedb.org/) y realizar la portada principal de una página web donde visualizar distintas películas.**
 
-## Available Scripts
+### Pasos que realicé para conseguirlo 👀
+* Visualizar el diseño ofrecido.
+* Crear cuenta en **themoviedb**.
+* Empezar el proyecto en create-react-app.
+* Dividir bien las secciones y componentes para organizar las tareas.
+* **Manos a la obra** 💻.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+#### Fetch para consumir la API.
+Creé un componente llamado "getMovies.js", donde utilicé un **fetch** para consumir la API y retornar los valores que necesitaba para trabajar.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```javascript
+export default function getMovies(data, pag = 1){
+    const api = `https://api.themoviedb.org/3/movie/${data}?api_key=${apiKey}&language=en-US&page=${pag}`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    return  fetch(api)
+        .then(res => res.json())
+        .then(response => {
+            const data = response.results;
+            const movies = data.map(mov => {
+                const { overview, vote_average, id, original_title, backdrop_path, genre_ids, poster_path } = mov;
+                return { overview, vote_average, id, original_title, backdrop_path, genre_ids, poster_path };
+            });
+            return movies;
+        });
+}
+```
 
-### `npm test`
+#### Creación de Nav.
+Una vez obtenidos los datos, decidí crear el **Nav** para poder indicar la sección en la que se está posicionada, dándole sus estilos y algunas pequeñas funcionalidades con el *hover* para darle vida 😎.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Nav](./public/Nav.png)
 
-### `npm run build`
+#### Sección de New Trailers
+Completado el Nav, decidí crear la sección de Trailers, utilizando los datos retornados por el *fetch* a la API, y creando componentes con las imágenes de las nuevas películas.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![newTrailers](/public/newTrailers.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Sección Favourite Genres
+También dentro de la misma sección pero más abajo, creé un componente, con un contenedor donde agregar los géneros favoritos de las películas y poder filtrarlos.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![FavouriteGenres](/public/FavouriteGenres.png)
 
-### `npm run eject`
+#### Sección de Movies
+Ya para terminar, creé las secciones y componentes de cada una de las películas.Las películas al pasar el cursor se les puede visualizar el hover, donde indica el **overview** de cada una de ellas.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Portada general que carga aleatoriamente.
+2. Películas para continuar mirando.
+3. Las películas populares de 2022.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Movies](/public/Movies.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Responsive Design
+Para concluir la página, procedí por adaptar todo a dispositivos móviles para que se pueda ver comodamente sea en PC como en móviles.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
+Espero les guste, pueden ver el resultado final en:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+😁👀

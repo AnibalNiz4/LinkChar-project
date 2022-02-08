@@ -1,0 +1,51 @@
+.buttonPlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background: #c4c4c4;
+    cursor: pointer;
+}
+
+.buttonPlay:hover {
+    transform: scale(1.1);
+}
+
+.triangleLeft {
+    background: transparent;
+    width: 0; 
+    height: 5px; 
+    border-left: 10px solid #fff;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent; 
+}
+
+.triangleRight {
+    background: transparent;
+    width: 0px; 
+    height: 5px; 
+    border-right: 10px solid #fff;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent; 
+}
+
+@media screen and (max-width: 1001px) {
+    .buttonPlay {
+        height: 20px;
+        width: 20px;
+    }
+    
+    .triangleLeft {
+        border-left: 6px solid #fff;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent; 
+    }
+    
+    .triangleRight {
+        border-right: 6px solid #fff;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent; 
+    }
+}

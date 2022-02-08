@@ -1,0 +1,210 @@
+.navContainer{
+  display: flex;
+  max-width: 1340px;
+  height: 88px;
+  margin: 0 auto;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid #323232;
+  padding: 0 30px;
+}
+
+.logoAndSections{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoNav{
+  font-size: 24px;
+  position: relative;
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+}
+
+.logoNav:hover{
+  transform: scale(1.05);
+}
+
+.logoNav::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: -webkit-gradient(linear, left top, right top, from(#EC008C), to(#FC6767));
+  background: linear-gradient(to right, #EC008C, #FC6767);
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+}
+
+ul{
+  display: flex;
+  list-style: none;
+}
+
+.sectionsNav {
+  margin-left: 150px;
+}
+
+.sectionsNav li{
+  color: #606265;
+  margin-right: 50px;
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+  position: relative;
+}
+
+.sectionsNav li:hover{
+  /* transform: scale(1.05); */
+  color: white;
+}
+
+.sectionsNav li:first-child::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  background-image: url('./../../../public/wave.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  bottom: -38px;
+}
+
+.sectionsNav li:first-child{
+  color: white;
+}
+
+.sectionTwo{
+  display: flex;
+  align-items: center;
+}
+
+.sectionTwo li{
+  margin: 0 10px;
+}
+
+.searchBox{
+  display: flex;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+  align-items: center;
+}
+
+.searchBox:hover{
+  border: 1px solid rgba(255, 255, 255, .5);
+}
+
+.searchBox:hover > .searchInput{
+  width: 200px;
+  padding: 0 6px;
+}
+
+.searchInput{
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  padding: 0;
+  font-size: 15px;
+  transition: .4s;
+  width: 0px;
+}
+
+.searchNav{
+  cursor: pointer;
+}
+
+.ellipseNav{
+  height: 19px;
+  width: 19px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-bottom: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.ellipseNav::before{
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #F36F45;
+  right: 0;
+}
+
+.circles{
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.divCircle{
+  margin: 0;
+  height: 10px;
+}
+
+.divCircle img {
+  margin: 0 1px;
+}
+
+.userArrow{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.userOptions{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.userArrow img {
+  margin: 0 2px;
+  position: relative;
+}
+
+.accountNav{
+  position: absolute;
+  right: 66px;
+  top: 70px;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, .3);
+  display: none;
+  z-index: 1111;
+}
+
+.active {
+  display: flex;
+  width: 120px;
+}
+
+.accountNav img{
+  margin-bottom: 10px;
+}
+
+.accountNav p {
+  padding: 15px 0;
+  width: 100px;
+  background: rgba(0, 0, 0, .3);
+}
+
+.accountNav p:hover{
+  background: rgba(255, 255, 255, .5);
+}
+
+@media screen and (max-width: 1000px) {
+  .navContainer {
+    display: none;
+  }
+}

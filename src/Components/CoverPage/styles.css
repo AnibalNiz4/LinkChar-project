@@ -1,0 +1,175 @@
+.coverContainer {
+    width: 85%;
+    height: 200px;
+    margin-top: 35px;
+    border-radius: 20px;
+    position: relative;
+    color: white;
+    box-shadow: 1px 1px 2px rgba(255, 255, 255, .1);
+    opacity: .9;
+    cursor: pointer;
+}
+
+.coverContainer:hover {
+    opacity: 1;
+}
+
+.friendsAndButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin-left: 20px;
+}
+
+.friends {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 15px;
+}
+
+.friendImg, .friendImg2 {
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.friendImg2 {
+    position: absolute;
+    left: 20px;
+}
+
+.friendImg img {
+    height: 100%;
+    width: 100%;
+}
+
+.friends p {
+    margin-left: 35px;
+}
+
+.movieTitle {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.imgCover{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    position: absolute;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.watchNowButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 0;
+    background: #F36F45;
+    width: 120px;
+    border-radius: 5px;
+    opacity: .9;
+    margin-bottom: 15px;
+}
+
+.watchNowButton:hover {
+    opacity: 1;
+    transform: scale(1.01);
+}
+
+.buttonPlayWatch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #c4c4c4;
+    cursor: pointer;
+}
+
+.triangleLeftWatch {
+    background: transparent;
+    width: 0; 
+    height: 5px; 
+    border-left: 8px solid #fff;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent; 
+}
+
+.watchNowButton p {
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+
+
+
+
+@media screen and (max-width: 1001px) {
+    .coverContainer {
+        width: 90%;
+        height: 250px;
+    }
+
+    .friendImg, .friendImg2 {
+        height: 20px;
+        width: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .friendImg img, .friendImg2 img {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .friends p {
+        margin-left: 35px;
+        font-size: 14px;
+    }
+    
+    .movieTitle {
+        font-size: 25px;
+    }
+    
+    .watchNowButton {
+        padding: 5px 0;
+        width: 100px;
+    }
+    
+    .buttonPlayWatch {
+        height: 16px;
+        width: 16px;
+    }
+    
+    .triangleLeftWatch {
+        height: 3px; 
+        border-left: 6px solid #fff;
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent; 
+    }
+    
+    .watchNowButton p {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .coverContainer {
+        width: 90%;
+        height: 170px;
+    }
+
+    .movieTitle {
+        font-size: 18px;
+    }
+}
